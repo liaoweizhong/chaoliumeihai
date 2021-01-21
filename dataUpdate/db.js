@@ -3,9 +3,9 @@ let db = {};
 db.connection = function () {
     let connection = mysql.createPool({
         // host     : 'localhost',
-        host     : '101.32.181.63',
-        user     : 'root',
-        password : '@Liao5249',
+        host     : '',
+        user     : '',
+        password : '',
         port: '3306',
         database: 'chaoliumeihai',
     });
