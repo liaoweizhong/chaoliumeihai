@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const hostname = '0。0.0.0';
-require("./user.js")(app);
+require("./api/user.js")(app);
 require("./api/video.js")(app);
 const port = 8001;
 

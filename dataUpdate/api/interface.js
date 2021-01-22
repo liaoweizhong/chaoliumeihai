@@ -1,12 +1,18 @@
-const db = require("./db.js");
+const db = require("../db.js");
 const url  = require('url');
-console.log("加载用户接口")
 module.exports = function(app){
-	
-	app.get('/test',function(req,res){
+    
+    // 记录保存数据库名称
+    let table_name = "";
+    // 数据库池链接实例
+    let app = param.app;
+    // 接口名
+    let interface_name = "interfaceTest";
+
+	app.get('/'+interface_name+"/get",function(req,res){
 		var connect = db.connection();
 		console.log("进入访问")
-		db.operate(connect,"select * from bs_user",[],function(result){
+		db.operate(connect,"select * from "+table_name,[],function(result){
 			console.log("接口结果:"+result)
 			res.send(result);
 		});
